@@ -40,7 +40,7 @@ const AuthProvider = ({children}) => {
             setUserInfo(userInfo)
             setIsLoading(false);
             if(userInfo){
-                console.log("code is 2000")
+                console.log("code is present")
             }
 
         }catch(err){

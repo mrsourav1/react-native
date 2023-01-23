@@ -24,23 +24,23 @@ const Navigation = () => {
   return (
       <NavigationContainer>
         <Stack.Navigator>
-          {splashLoading ?(
+          {/* {splashLoading ?(
             <Stack.Screen
             name="Splash Screen"
             component={SplashScreen}
             options={{headerShown: false}}
           />
           ):userInfo.token ? (
-            <Stack.Screen name="SignUP" component={SignUp} options={{headerShown:false}} />
+            <Stack.Screen name="SignUp" component={SignUp} options={{headerShown:false}} />
           ):(
             <><Stack.Screen name="Login" component={Sample} options={{title:"Login",headerStyle:{backgroundColor:"#F5F3F3"},headerTintColor:"black",headerTitleAlign:'center',headerTintStyle:{fontWeight:"bold"}}}/>
             </>
           )
-        }
+        } */}
           {/* <Sample />  */}
-          {/* <Stack.Screen name="Login" component={Sample} options={{title:"Login",headerStyle:{backgroundColor:"#F5F3F3"},headerTintColor:"black",headerTitleAlign:'center',headerTintStyle:{fontWeight:"bold"}}}/> */}
-          {/* <Stack.Screen name="SignUP" component={SignUp} options={{headerShown:false}} /> */}
-          {/* <Stack.Screen name="editProfile" component={EditProfile} options={{title:"Edit Profile",headerStyle:{backgroundColor:"#F5F3F3"},headerTintColor:"black",headerTitleAlign:'center',headerTintStyle:{fontWeight:"bold"}}} /> */}
+          {/* <Stack.Screen name="Login" component={Sample} options={{title:"Login",headerStyle:{backgroundColor:"#F5F3F3"},headerTintColor:"black",headerTitleAlign:'center',headerTintStyle:{fontWeight:"bold"}}}/>
+          <Stack.Screen name="SignUP" component={SignUp} options={{headerShown:false}} /> */}
+          <Stack.Screen name="editProfile" component={EditProfile} options={{title:"Edit Profile",headerStyle:{backgroundColor:"#F5F3F3"},headerTintColor:"black",headerTitleAlign:'center',headerTintStyle:{fontWeight:"bold"}}} />
         </Stack.Navigator>
       </NavigationContainer>
   )

@@ -4,13 +4,13 @@ import checkcircleo from 'react-native-vector-icons/AntDesign';
 import { Ionicons } from '@expo/vector-icons';
 import {Dimensions} from 'react-native';
 import { AuthContext } from '../Context/AuthContext';
+import Spinner from 'react-native-loading-spinner-overlay';
+// import Spinner from 'react-native-loading-spinner-overlay/lib';
 
 const Sample = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordShow,setPasswordShow] = useState(true)
-    const deviceWidth = Dimensions.get('window').width;
-    const deviceHeight = Dimensions.get('window').height;
     const {isLoading,Login} = useContext(AuthContext)
 
     // const Login = ({email,password}) =>{
@@ -45,6 +45,7 @@ const Sample = ({navigation}) => {
   return (
     <>
     <KeyboardAvoidingView behavior='height' style={styles.container}>
+        <Spinner visible={isLoading} />
         <ScrollView keyboardDismissMode='on-drag'>
             <TextInput 
             style = {styles.email}
@@ -72,7 +73,7 @@ const Sample = ({navigation}) => {
             <View style={styles.forgetpassword_Container}>
                 <Pressable onPress={()=>{Alert.alert("forget Passowrd")}}><Text style={styles.forgetpassword_Text}>forget password?</Text></Pressable>
             </View>
-            <Pressable style={styles.loginButton} onPress={()=>Login(email,password)}>
+            <Pressable style={styles.loginButton} onPress={()=>{}}>
                 <Text style={styles.loginText}>Login</Text>
             </Pressable>
             {/* <View style={styles.newUser_Container}>

@@ -15,6 +15,7 @@ import EditProfile from './component/EditProfile';
 import AuthProvider,{AuthContext} from './Context/AuthContext'
 import SplashScreen from './component/SplashScreen';
 import Navigation from './component/Navigation';
+import RegistrationScreen from "./component/hanui/Signup"
 
 
 // export default function App() {
@@ -48,6 +49,7 @@ export default function app(){
       {/* <FlatList /> */}  
       <AuthProvider>
         <Navigation />
+        {/* <RegistrationScreen /> */}
       </AuthProvider>
 
     </>
